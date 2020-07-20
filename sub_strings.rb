@@ -17,6 +17,7 @@ Return results hash.
 
 def substrings(string, dictionary)
   results = {}
+  string = string.downcase
   dictionary.each do |str|
     if string.include?(str)
       results[str] = string.scan(str).size
